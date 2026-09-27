@@ -1,0 +1,14 @@
+variable "project_name" { type = string }
+variable "environment" { type = string }
+variable "aws_region" { type = string }
+variable "extraction_queue_name" { type = string }
+variable "extraction_dlq_name" { type = string }
+variable "ecs_cluster_name" { type = string }
+variable "ecs_service_name" { type = string }
+variable "cloudwatch_log_group_name" { type = string }
+variable "alert_topic_arn" { type = string }
+variable "bootstrap_alarm_arn" { type = string }
+variable "queue_drained_alarm_arn" { type = string }
+variable "queue_empty_alarm_arn" { type = string }
+variable "backlog_per_task_target" { type = number }
+variable "oldest_message_alarm_seconds" { type = number }

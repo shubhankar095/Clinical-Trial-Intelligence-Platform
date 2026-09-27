@@ -1,0 +1,71 @@
+module "foundation" {
+  source                         = "./components/foundation"
+  project_name                   = var.project_name
+  environment                    = var.environment
+  raw_bucket_name                = var.raw_bucket_name
+  canonical_bucket_name          = var.canonical_bucket_name
+  vpc_cidr                       = var.vpc_cidr
+  public_subnet_a_cidr           = var.public_subnet_a_cidr
+  public_subnet_b_cidr           = var.public_subnet_b_cidr
+  sqs_visibility_timeout_seconds = var.sqs_visibility_timeout_seconds
+  sqs_max_receive_count          = var.sqs_max_receive_count
+  alert_email                    = var.alert_email
+}
+module "worker" {
+  source                             = "./components/worker"
+  project_name                       = var.project_name
+  environment                        = var.environment
+  aws_region                         = var.aws_region
+  image_tag                          = var.image_tag
+  ecs_cpu                            = var.ecs_cpu
+  ecs_memory                         = var.ecs_memory
+  ecs_min_capacity                   = var.ecs_min_capacity
+  subnet_ids                         = module.foundation.public_subnet_ids
+  security_group_id                  = module.foundation.security_group_id
+  raw_bucket_name                    = module.foundation.raw_bucket_name
+  canonical_bucket_name              = module.foundation.canonical_bucket_name
+  extraction_queue_url               = module.foundation.extraction_queue_url
+  extraction_queue_arn               = module.foundation.extraction_queue_arn
+  processing_registry_name           = module.foundation.processing_registry_name
+  processing_registry_arn            = module.foundation.processing_registry_arn
+  processing_schema_version          = var.processing_schema_version
+  sqs_visibility_extension_seconds   = var.sqs_visibility_extension_seconds
+  sqs_visibility_heartbeat_seconds   = var.sqs_visibility_heartbeat_seconds
+  processing_claim_lease_seconds     = var.processing_claim_lease_seconds
+  processing_claim_heartbeat_seconds = var.processing_claim_heartbeat_seconds
+  log_retention_days                 = var.log_retention_days
+}
+module "autoscaling" {
+  source                                  = "./components/autoscaling"
+  project_name                            = var.project_name
+  environment                             = var.environment
+  extraction_queue_name                   = module.foundation.extraction_queue_name
+  ecs_cluster_name                        = module.worker.ecs_cluster_name
+  ecs_service_name                        = module.worker.ecs_service_name
+  ecs_min_capacity                        = var.ecs_min_capacity
+  ecs_max_capacity                        = var.ecs_max_capacity
+  backlog_per_task_target                 = var.backlog_per_task_target
+  ecs_scale_out_cooldown_seconds          = var.ecs_scale_out_cooldown_seconds
+  ecs_scale_in_cooldown_seconds           = var.ecs_scale_in_cooldown_seconds
+  queue_drained_evaluation_periods        = var.queue_drained_evaluation_periods
+  queue_drained_scale_in_cooldown_seconds = var.queue_drained_scale_in_cooldown_seconds
+  scale_to_zero_evaluation_periods        = var.scale_to_zero_evaluation_periods
+  idle_scale_to_zero_cooldown_seconds     = var.idle_scale_to_zero_cooldown_seconds
+}
+module "observability" {
+  source                       = "./components/observability"
+  project_name                 = var.project_name
+  environment                  = var.environment
+  aws_region                   = var.aws_region
+  extraction_queue_name        = module.foundation.extraction_queue_name
+  extraction_dlq_name          = module.foundation.extraction_dlq_name
+  ecs_cluster_name             = module.worker.ecs_cluster_name
+  ecs_service_name             = module.worker.ecs_service_name
+  cloudwatch_log_group_name    = module.worker.cloudwatch_log_group_name
+  alert_topic_arn              = module.foundation.alert_topic_arn
+  bootstrap_alarm_arn          = module.autoscaling.bootstrap_alarm_arn
+  queue_drained_alarm_arn      = module.autoscaling.queue_drained_alarm_arn
+  queue_empty_alarm_arn        = module.autoscaling.queue_empty_alarm_arn
+  backlog_per_task_target      = var.backlog_per_task_target
+  oldest_message_alarm_seconds = var.oldest_message_alarm_seconds
+}

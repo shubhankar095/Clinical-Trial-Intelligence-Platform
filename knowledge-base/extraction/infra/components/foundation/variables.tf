@@ -1,0 +1,10 @@
+variable "project_name" { type = string }
+variable "environment" { type = string }
+variable "raw_bucket_name" { type = string }
+variable "canonical_bucket_name" { type = string }
+variable "vpc_cidr" { type = string }
+variable "public_subnet_a_cidr" { type = string }
+variable "public_subnet_b_cidr" { type = string }
+variable "sqs_visibility_timeout_seconds" { type = number }
+variable "sqs_max_receive_count" { type = number }
+variable "alert_email" { type = string }

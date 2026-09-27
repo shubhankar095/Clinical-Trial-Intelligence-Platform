@@ -1,0 +1,13 @@
+output "raw_bucket_name" { value = aws_s3_bucket.raw.bucket }
+output "canonical_bucket_name" { value = aws_s3_bucket.canonical.bucket }
+output "extraction_queue_url" { value = aws_sqs_queue.extraction_queue.id }
+output "extraction_queue_arn" { value = aws_sqs_queue.extraction_queue.arn }
+output "extraction_queue_name" { value = aws_sqs_queue.extraction_queue.name }
+output "extraction_dlq_arn" { value = aws_sqs_queue.extraction_dlq.arn }
+output "extraction_dlq_name" { value = aws_sqs_queue.extraction_dlq.name }
+output "processing_registry_name" { value = aws_dynamodb_table.processing_registry.name }
+output "processing_registry_arn" { value = aws_dynamodb_table.processing_registry.arn }
+output "vpc_id" { value = aws_vpc.main.id }
+output "public_subnet_ids" { value = [aws_subnet.public_a.id, aws_subnet.public_b.id] }
+output "security_group_id" { value = aws_security_group.ecs.id }
+output "alert_topic_arn" { value = aws_sns_topic.alerts.arn }

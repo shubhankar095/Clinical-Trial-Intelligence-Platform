@@ -1,0 +1,60 @@
+# Terraform
+.terraform/
+.pytest_cache/
+.python-version/
+.coverage
+*.tfstate
+*.tfstate.*
+crash.log
+.terraform.lock.hcl
+**/__pycache__/
+**/*.py[cod]
+**/*.egg-info/
+**/.pytest_cache/
+**/.coverage
+**/htmlcov/
+uv.lock
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+build/
+dist/
+.pytest_cache/
+
+# Environment
+.env
+.credentials
+
+# Generated packages
+*.zip
+
+# Local reports
+*.txt
+*.bak
+
+# Packaging output
+
+
+# OS
+.DS_Store
+Thumbs.db
+
+
+*.egg-info
+*.egg-info/
+*PKG-INFO
+
+aws/*
+.pytest_cache/*
+.python-version/*
+Shubhankar_resume_pdf.pdf
+output.json
+test-output/*
+.python-version
+
+tests/test.py
+scripts/manual_extraction_test.py
+knowledge-base/extraction/scripts/*

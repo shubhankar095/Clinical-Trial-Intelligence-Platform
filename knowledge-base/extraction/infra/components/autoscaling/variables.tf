@@ -1,0 +1,14 @@
+variable "project_name" { type = string }
+variable "environment" { type = string }
+variable "extraction_queue_name" { type = string }
+variable "ecs_cluster_name" { type = string }
+variable "ecs_service_name" { type = string }
+variable "ecs_min_capacity" { type = number }
+variable "ecs_max_capacity" { type = number }
+variable "backlog_per_task_target" { type = number }
+variable "ecs_scale_out_cooldown_seconds" { type = number }
+variable "ecs_scale_in_cooldown_seconds" { type = number }
+variable "queue_drained_evaluation_periods" { type = number }
+variable "queue_drained_scale_in_cooldown_seconds" { type = number }
+variable "scale_to_zero_evaluation_periods" { type = number }
+variable "idle_scale_to_zero_cooldown_seconds" { type = number }

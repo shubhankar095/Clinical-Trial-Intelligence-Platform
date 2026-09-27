@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=69.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ingestion"
+version = "0.1.0"
+description = "Clinical Trial Intelligence Platform - Ingestion"
+requires-python = ">=3.12"
+
+dependencies = [
+    "langchain-text-splitters>=0.3.0",
+    "sentence-transformers>=5.0.0",
+    "utils"
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0.0"
+]
+
+[tool.uv.sources]
+utils = { path = "../../packages/utils" }

@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=69.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "utils"
+version = "0.1.0"
+description = "Shared platform utilities"
+requires-python = ">=3.12"
+
+dependencies = [
+    "rich==14.0.0"
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0.0"
+]
+
+[tool.setuptools]
+packages = ["utils"]
