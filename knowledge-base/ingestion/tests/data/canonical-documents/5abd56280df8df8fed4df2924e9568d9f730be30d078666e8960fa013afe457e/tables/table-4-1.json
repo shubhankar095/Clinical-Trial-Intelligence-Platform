@@ -1,0 +1,37 @@
+[
+  [
+    "Level",
+    "Objective",
+    "Endpoint"
+  ],
+  [
+    "Primary",
+    "Assess change in activity regularity",
+    "Change in percentage of evaluable days inside the selected\nactivity window"
+  ],
+  [
+    "Secondary",
+    "Assess sleep timing regularity",
+    "Change in standard deviation of nightly sleep midpoint"
+  ],
+  [
+    "Secondary",
+    "Assess engagement",
+    "Proportion of intervention weeks with a completed planning\ninteraction"
+  ],
+  [
+    "Secondary",
+    "Assess retention",
+    "Proportion completing the Week 12 assessment"
+  ],
+  [
+    "Secondary",
+    "Assess usability",
+    "Mean score on the study usability questionnaire"
+  ],
+  [
+    "Exploratory",
+    "Explore daytime functioning",
+    "Change in a short self-reported functioning scale"
+  ]
+]

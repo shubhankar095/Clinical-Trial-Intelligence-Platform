@@ -1,0 +1,34 @@
+[
+  [
+    "Item",
+    "Description"
+  ],
+  [
+    "Primary objective",
+    "Evaluate whether a structured digital wellness program improves consistency of daily activity\nover 12 weeks."
+  ],
+  [
+    "Secondary objectives",
+    "Evaluate sleep timing regularity, engagement, usability, retention, and data completeness."
+  ],
+  [
+    "Design",
+    "Two-week baseline, eight-week intervention, and two-week follow-up; randomized 1:1."
+  ],
+  [
+    "Intervention",
+    "Digital reminders, weekly planning prompts, activity goal setting, and sleep-routine education."
+  ],
+  [
+    "Control",
+    "Static wellness information without adaptive reminders or weekly planning prompts."
+  ],
+  [
+    "Primary endpoint",
+    "Change from baseline in the percentage of evaluable days meeting a participant-specific\nactivity window."
+  ],
+  [
+    "Duration",
+    "Up to 14 weeks per participant, including screening and closeout."
+  ]
+]

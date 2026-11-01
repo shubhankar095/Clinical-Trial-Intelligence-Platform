@@ -1,0 +1,32 @@
+[
+  [
+    "Stage",
+    "Activity",
+    "Output"
+  ],
+  [
+    "Screening",
+    "Confirm eligibility, consent, and smartphone compatibility",
+    "Screened participant"
+  ],
+  [
+    "Baseline",
+    "Collect at least 7 activity days and 5 sleep diaries",
+    "Baseline-qualified participant"
+  ],
+  [
+    "Randomization",
+    "Apply centralized allocation with concealed variable block sizes",
+    "Assigned group"
+  ],
+  [
+    "Intervention",
+    "Deliver assigned content and collect engagement data",
+    "Intervention dataset"
+  ],
+  [
+    "Follow-up",
+    "Collect final passive data and questionnaires",
+    "Completed participant record"
+  ]
+]

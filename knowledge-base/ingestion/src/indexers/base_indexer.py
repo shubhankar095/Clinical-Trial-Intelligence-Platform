@@ -1,13 +1,33 @@
-from abc import ABC, abstractmethod
+from abc import (
+    ABC,
+    abstractmethod,
+)
 
-from models.document import ClinicalDocument
+from models.index_record import (
+    IndexRecord,
+)
 
 
 class BaseIndexer(ABC):
+    """
+    Common interface for index persistence adapters.
+
+    Implementations may write records to local
+    storage, OpenSearch, or another search system.
+    """
 
     @abstractmethod
-    def index(
+    def index_records(
         self,
-        document: ClinicalDocument
-    ) -> ClinicalDocument:
-        pass
+        *,
+        ingestion_id: str,
+        records: tuple[
+            IndexRecord,
+            ...,
+        ],
+    ) -> str:
+        """
+        Persist index records and return a
+        destination description.
+        """
+        raise NotImplementedError

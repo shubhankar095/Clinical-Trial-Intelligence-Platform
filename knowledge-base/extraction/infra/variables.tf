@@ -1,17 +1,17 @@
 variable "project_name" {
-  description = "Project name"
+  description = "Project identifier used in names and tags."
   type        = string
   default     = "clinical-kb"
 }
 
 variable "aws_region" {
-  description = "AWS Region"
+  description = "AWS region for the Extraction service."
   type        = string
-  default     = "us-east-1"
+  default     = "ap-south-1"
 }
 
 variable "environment" {
-  description = "Deployment environment"
+  description = "Deployment environment."
   type        = string
   default     = "dev"
 
@@ -21,66 +21,32 @@ variable "environment" {
   }
 }
 
-variable "raw_bucket_name" {
-  description = "Raw Data S3 Bucket name"
+variable "service_name" {
+  description = "Service that owns the deployed resources."
   type        = string
-  default     = "raw"
+  default     = "Extraction"
 }
 
-variable "canonical_bucket_name" {
-  description = "Canonical Data S3 bucket name"
+variable "owner" {
+  description = "Team accountable for the deployed resources."
   type        = string
-  default     = "canonical"
+  default     = "knowledge-base"
 }
 
-variable "ecs_min_capacity" {
-  description = "Minimum ECS capacity"
-  type        = number
-  default     = 0
-
-  validation {
-    condition     = var.ecs_min_capacity >= 0
-    error_message = "ecs_min_capacity must be zero or greater."
-  }
+variable "platform_state_bucket" {
+  description = "S3 bucket containing the Platform Terraform state."
+  type        = string
 }
 
-variable "ecs_max_capacity" {
-  description = "Maximum ECS capacity"
-  type        = number
-  default     = 10
-
-  validation {
-    condition     = var.ecs_max_capacity >= var.ecs_min_capacity
-    error_message = "ecs_max_capacity must be greater than or equal to ecs_min_capacity."
-  }
+variable "platform_state_key" {
+  description = "S3 key containing the Platform Terraform state."
+  type        = string
 }
 
-variable "ecs_cpu" {
-  description = "ECS Fargate task CPU units"
-  type        = number
-  default     = 1024
-
-  validation {
-    condition = contains(
-      [256, 512, 1024, 2048, 4096, 8192, 16384],
-      var.ecs_cpu
-    )
-
-    error_message = "ecs_cpu must be a supported Fargate CPU value."
-  }
+variable "platform_state_region" {
+  description = "AWS region of the Platform Terraform state bucket."
+  type        = string
 }
-
-variable "ecs_memory" {
-  description = "ECS Fargate task memory in MiB"
-  type        = number
-  default     = 2048
-
-  validation {
-    condition     = var.ecs_memory > 0
-    error_message = "ecs_memory must be greater than zero."
-  }
-}
-
 
 variable "image_tag" {
   description = "ECR image tag deployed to the extraction ECS service"
@@ -113,14 +79,62 @@ variable "image_tag" {
 }
 
 variable "alert_email" {
-  description = "Email address subscribed to operational SNS alerts"
+  description = "Email address subscribed to operational SNS alerts."
   type        = string
 }
 
 variable "log_retention_days" {
-  description = "CloudWatch log retention in days"
+  description = "CloudWatch log retention in days."
   type        = number
   default     = 30
+}
+
+variable "ecs_min_capacity" {
+  description = "Minimum ECS worker capacity."
+  type        = number
+  default     = 0
+
+  validation {
+    condition     = var.ecs_min_capacity >= 0
+    error_message = "ecs_min_capacity must be zero or greater."
+  }
+}
+
+variable "ecs_max_capacity" {
+  description = "Maximum ECS worker capacity."
+  type        = number
+  default     = 5
+
+  validation {
+    condition     = var.ecs_max_capacity >= var.ecs_min_capacity
+    error_message = "ecs_max_capacity must be greater than or equal to ecs_min_capacity."
+  }
+}
+
+variable "ecs_cpu" {
+  description = "ECS Fargate task CPU units"
+  type        = number
+  default     = 1024
+
+  validation {
+    condition = contains(
+      [256, 512, 1024, 2048, 4096, 8192, 16384],
+      var.ecs_cpu
+    )
+
+    error_message = "ecs_cpu must be a supported Fargate CPU value."
+  }
+}
+
+variable "ecs_memory" {
+  description = "ECS Fargate task memory in MiB"
+  type        = number
+  default     = 2048
+
+  validation {
+    condition     = var.ecs_memory > 0
+    error_message = "ecs_memory must be greater than zero."
+  }
 }
 
 variable "sqs_visibility_timeout_seconds" {
@@ -169,43 +183,6 @@ variable "oldest_message_alarm_seconds" {
   }
 }
 
-variable "vpc_cidr" {
-  description = "CIDR block assigned to the extraction VPC"
-  type        = string
-  default     = "10.0.0.0/16"
-}
-
-variable "public_subnet_a_cidr" {
-  description = "CIDR block assigned to the first public subnet"
-  type        = string
-  default     = "10.0.1.0/24"
-}
-
-variable "public_subnet_b_cidr" {
-  description = "CIDR block assigned to the second public subnet"
-  type        = string
-  default     = "10.0.2.0/24"
-}
-
-
-variable "processing_schema_version" {
-  description = "Version of the extraction output schema"
-  type        = string
-  default     = "extraction-v1"
-
-  validation {
-    condition = (
-      length(
-        trimspace(
-          var.processing_schema_version
-        )
-      ) > 0
-    )
-
-    error_message = "processing_schema_version must not be empty."
-  }
-}
-
 variable "sqs_visibility_extension_seconds" {
   description = "Visibility lease applied while document processing is active"
   type        = number
@@ -239,6 +216,25 @@ variable "sqs_visibility_heartbeat_seconds" {
   }
 }
 
+variable "processing_schema_version" {
+  description = "Version of the extraction output schema"
+  type        = string
+  default     = "extraction-v1"
+
+  validation {
+    condition = (
+      length(
+        trimspace(
+          var.processing_schema_version
+        )
+      ) > 0
+    )
+
+    error_message = "processing_schema_version must not be empty."
+  }
+}
+
+
 variable "processing_claim_lease_seconds" {
   description = "Duration of an exclusive document-processing claim"
   type        = number
@@ -263,6 +259,23 @@ variable "processing_claim_lease_seconds" {
   }
 }
 
+variable "processing_claim_heartbeat_seconds" {
+  description = "Interval between DynamoDB processing-claim lease renewals"
+  type        = number
+  default     = 300
+
+  validation {
+    condition = (
+      var.processing_claim_heartbeat_seconds > 0
+      && (
+        var.processing_claim_heartbeat_seconds
+        < var.processing_claim_lease_seconds
+      )
+    )
+
+    error_message = "processing_claim_heartbeat_seconds must be positive and less than processing_claim_lease_seconds."
+  }
+}
 
 variable "backlog_per_task_target" {
   description = "Target number of visible SQS messages per running extraction task"
@@ -307,7 +320,6 @@ variable "ecs_scale_in_cooldown_seconds" {
     error_message = "ecs_scale_in_cooldown_seconds must be between 0 and 3600."
   }
 }
-
 
 variable "queue_drained_evaluation_periods" {
   description = "Consecutive one-minute empty queue periods required before reducing excess extraction workers directly to one"
@@ -366,23 +378,5 @@ variable "idle_scale_to_zero_cooldown_seconds" {
     )
 
     error_message = "idle_scale_to_zero_cooldown_seconds must be between 0 and 3600."
-  }
-}
-
-variable "processing_claim_heartbeat_seconds" {
-  description = "Interval between DynamoDB processing-claim lease renewals"
-  type        = number
-  default     = 300
-
-  validation {
-    condition = (
-      var.processing_claim_heartbeat_seconds > 0
-      && (
-        var.processing_claim_heartbeat_seconds
-        < var.processing_claim_lease_seconds
-      )
-    )
-
-    error_message = "processing_claim_heartbeat_seconds must be positive and less than processing_claim_lease_seconds."
   }
 }

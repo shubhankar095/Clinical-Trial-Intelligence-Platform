@@ -1,0 +1,255 @@
+{
+  "document_id": "5abd56280df8df8fed4df2924e9568d9f730be30d078666e8960fa013afe457e",
+  "file_name": "synthetic_mixed_extraction_protocol.pdf",
+  "file_format": "pdf",
+  "source_bucket": "clinical-kb-raw-dev",
+  "source_key": "documents/AURORA-MIXED-01/protocols/synthetic_mixed_extraction_protocol.pdf",
+  "canonical_bucket": "clinical-kb-processed-dev",
+  "canonical_key": "canonical-documents/5abd56280df8df8fed4df2924e9568d9f730be30d078666e8960fa013afe457e/extracted-document.json",
+  "metadata": {
+    "study_id": "AURORA-MIXED-01",
+    "document_type": "PROTOCOL",
+    "version": null,
+    "sponsor": null,
+    "phase": null
+  },
+  "raw_text": "AURORA-WELL-01 | Synthetic Clinical Protocol\nVersion 1.1 | 04 October 2026\nSYNTHETIC TEST DOCUMENT - NOT FOR CLINICAL USE\nPage 1\nSYNTHETIC TEST DOCUMENT\nAURORA-WELL-01\nA Randomized, Controlled Pilot Study of a Digital Wellness Program for Improving Daily Activity\nand Sleep Routine Consistency in Adult Volunteers\nFigure 1. Conceptual study technology and wellness context. Synthetic visual included to test embedded-image extraction.\nProtocol identifier\nAURORA-WELL-01\nVersion\n1.1\nDate\n04 October 2026\nDesign\nRandomized, parallel-group, assessor-blinded pilot study\nPopulation\n120 adult volunteers\nSponsor\nNorthstar Clinical Research Collaborative (fictional)\nThis protocol is entirely fictional and exists only for software, extraction, chunking, embedding, indexing, image, and\ntable processing tests.\n\nAURORA-WELL-01 | Synthetic Clinical Protocol\nVersion 1.1 | 04 October 2026\nSYNTHETIC TEST DOCUMENT - NOT FOR CLINICAL USE\nPage 2\n1. Protocol Synopsis\nItem\nDescription\nPrimary objective\nEvaluate whether a structured digital wellness program improves consistency of daily activity\nover 12 weeks.\nSecondary objectives\nEvaluate sleep timing regularity, engagement, usability, retention, and data completeness.\nDesign\nTwo-week baseline, eight-week intervention, and two-week follow-up; randomized 1:1.\nIntervention\nDigital reminders, weekly planning prompts, activity goal setting, and sleep-routine education.\nControl\nStatic wellness information without adaptive reminders or weekly planning prompts.\nPrimary endpoint\nChange from baseline in the percentage of evaluable days meeting a participant-specific\nactivity window.\nDuration\nUp to 14 weeks per participant, including screening and closeout.\n1.1 Schedule Overview\nPeriod\nWeeks\nMain activities\nScreening\n-2 to 0\nConsent, eligibility, demographics, and device compatibility\nBaseline\n0 to 2\nPassive activity capture, sleep diary, and questionnaires\nIntervention\n2 to 10\nAssigned study content, weekly planning, and data capture\nFollow-up\n10 to 12\nFinal passive capture, questionnaires, and closeout\nThe intervention does not provide diagnosis, treatment, emergency monitoring, or medical advice.\n\nAURORA-WELL-01 | Synthetic Clinical Protocol\nVersion 1.1 | 04 October 2026\nSYNTHETIC TEST DOCUMENT - NOT FOR CLINICAL USE\nPage 3\n2. Background and Rationale\nRegular daily activity and consistent sleep timing are common behavioral indicators in wellness research. Routine\nvariability may arise from work schedules, travel, caregiving, and competing demands. Digital planning tools may help\nparticipants organize daily routines, although engagement can decline when reminders are excessive or poorly timed.\nAURORA-WELL-01 is a low-risk software-enabled pilot study. The program provides general planning prompts rather\nthan a medical intervention. The study is intended to estimate feasibility, retention, engagement, and endpoint variability\nbefore a larger investigation.\nFigure 2. Conceptual study journey from screening through follow-up and analysis. Synthetic visual included to test image\nextraction and S3 asset persistence.\n2.1 Rationale for the Program\n•\nWeekly planning supports realistic activity and sleep windows.\n•\nDaily reminders are limited and may be snoozed.\n•\nProgress summaries emphasize consistency rather than competition.\n•\nParticipants may stop optional prompts at any time.\n\nAURORA-WELL-01 | Synthetic Clinical Protocol\nVersion 1.1 | 04 October 2026\nSYNTHETIC TEST DOCUMENT - NOT FOR CLINICAL USE\nPage 4\n3. Objectives and Endpoints\nLevel\nObjective\nEndpoint\nPrimary\nAssess change in activity regularity\nChange in percentage of evaluable days inside the selected\nactivity window\nSecondary\nAssess sleep timing regularity\nChange in standard deviation of nightly sleep midpoint\nSecondary\nAssess engagement\nProportion of intervention weeks with a completed planning\ninteraction\nSecondary\nAssess retention\nProportion completing the Week 12 assessment\nSecondary\nAssess usability\nMean score on the study usability questionnaire\nExploratory\nExplore daytime functioning\nChange in a short self-reported functioning scale\n3.1 Endpoint Rules\n•\nA day is evaluable when at least 10 hours of device availability is recorded.\n•\nSleep midpoint is derived from participant-entered sleep and wake times after plausibility checks.\n•\nTimestamps are converted to participant-local time.\n•\nTemporary interruptions use available data under the prespecified analysis strategy.\n3.2 Sample Size Rationale\nA total of 120 randomized participants, approximately 60 per group, is expected to provide adequate precision for\nfeasibility estimates. Assuming up to 15% attrition, approximately 102 participants are expected to contribute to the\nprimary analysis.\n\nAURORA-WELL-01 | Synthetic Clinical Protocol\nVersion 1.1 | 04 October 2026\nSYNTHETIC TEST DOCUMENT - NOT FOR CLINICAL USE\nPage 5\n4. Study Design and Population\nAfter a two-week baseline period, eligible participants are assigned in a 1:1 ratio to the digital wellness program or\ncontrol condition. Assignment is stratified by baseline activity regularity and study site.\n4.1 Study Flow\nStage\nActivity\nOutput\nScreening\nConfirm eligibility, consent, and smartphone compatibility\nScreened participant\nBaseline\nCollect at least 7 activity days and 5 sleep diaries\nBaseline-qualified participant\nRandomization\nApply centralized allocation with concealed variable block sizes\nAssigned group\nIntervention\nDeliver assigned content and collect engagement data\nIntervention dataset\nFollow-up\nCollect final passive data and questionnaires\nCompleted participant record\n4.2 Inclusion Criteria\n•\nAge 21 to 65 years.\n•\nAble to provide informed consent.\n•\nOwns a compatible smartphone.\n•\nReports an irregular activity or sleep routine.\n•\nWilling to complete brief electronic questionnaires.\n4.3 Exclusion Criteria\n•\nConflicting research participation.\n•\nPlanned prolonged travel across more than three time zones.\n•\nRecent use of a similar structured wellness program.\n•\nInvestigator determination that participation is unsuitable.\n\nAURORA-WELL-01 | Synthetic Clinical Protocol\nVersion 1.1 | 04 October 2026\nSYNTHETIC TEST DOCUMENT - NOT FOR CLINICAL USE\nPage 6\n5. Schedule of Activities\nProcedure\nScreen\nBase\nWk 2\nWk 6\nWk 10\nWk 12\nConsent\nX\nEligibility\nX\nX\nDemographics\nX\nDevice check\nX\nX\nActivity capture\nX\nX\nX\nX\nX\nSleep diary\nX\nX\nX\nX\nX\nRandomization\nX\nEngagement\nX\nX\nX\nUsability\nX\nFunctioning scale\nX\nX\nX\nCloseout\nX\n5.1 Data Collection Windows\nAssessment\nTarget\nAllowed window\nBaseline completion\nDay 14\nDays 12 to 18\nWeek 6\nDay 42\nDays 38 to 46\nWeek 10\nDay 70\nDays 66 to 74\nWeek 12 closeout\nDay 84\nDays 80 to 91\nMissed questionnaires may be reissued within the allowed window. Passive device data are processed using\nprespecified derivation rules.\n\nAURORA-WELL-01 | Synthetic Clinical Protocol\nVersion 1.1 | 04 October 2026\nSYNTHETIC TEST DOCUMENT - NOT FOR CLINICAL USE\nPage 7\n6. Data Management, Privacy, and Security\nStudy data are captured through electronic forms, the study application, and device synchronization services.\nAutomated checks identify missing fields, implausible dates, duplicate submissions, and out-of-window assessments.\nCorrections require an audit trail.\nFigure 3. Conceptual secure data flow across participant devices, cloud services, and research systems. Synthetic visual\nincluded to test embedded-image extraction.\n6.1 Privacy Controls\n•\nDirect identifiers are stored separately from coded study records.\n•\nAccess is restricted by study role and reviewed periodically.\n•\nData exports use encrypted transfer and controlled storage locations.\n•\nRetention and deletion follow the approved data-management plan.\n6.2 Analysis Populations\nPopulation\nDefinition\nEnrolled\nAll individuals who provide informed consent\nRandomized\nAll participants assigned to a group\nPrimary analysis\nRandomized participants meeting minimum evaluable-data requirements\nPer-protocol\nParticipants without major eligibility or data deviations\nSafety summary\nParticipants who begin the assigned study condition\n\nAURORA-WELL-01 | Synthetic Clinical Protocol\nVersion 1.1 | 04 October 2026\nSYNTHETIC TEST DOCUMENT - NOT FOR CLINICAL USE\nPage 8\n7. Safety and Quality Oversight\nParticipants are instructed to report unfavorable experiences associated with study participation. Personnel document\nreported events, assess seriousness and relatedness, and follow site reporting procedures. The application does not\nprovide emergency monitoring.\n7.1 Event Categories\nCategory\nExample\nAction\nApplication issue\nUnexpected notification or synchronization\nfailure\nDocument, troubleshoot, and assess effect on study\ndata\nParticipation burden\nExcessive reminders or questionnaire fatigue\nAdjust optional reminders and document preference\nPhysical experience\nTemporary discomfort during voluntary activity\nStop activity and seek appropriate care if required\nPrivacy concern\nSuspected unauthorized access\nEscalate under the privacy incident procedure\n7.2 Quality Control\n•\nComplete site training before participant-facing activity.\n•\nUse required-field and range checks in key forms.\n•\nReview a sample of consent, eligibility, and endpoint records.\n•\nResolve or document data queries before database lock.\n•\nVersion analysis datasets and derivation specifications.\n7.3 Protocol Deviations\nA protocol deviation is any departure from the approved procedures or participant instructions. Deviations are\ndocumented, assessed for impact on participant rights and data reliability, and reviewed for corrective action.\nEnd of Protocol\nThis synthetic protocol was generated only to test document upload, native text extraction, image extraction, table extraction, OCR fallback, page\noffsets, chunking, embedding, and indexing.\n\nParticipant Routine Planning Worksheet\nAppendix A I Site Copy\nParticipant ID:\nVisit: Week 2\nComplete with study staff after randomization. Keep one copy for reference.\n1. Select a realistic daily activity window\nChoose a period of the day when ordinary activity is usually possible. The study does not require\nstrenuous exercise. Examples include walking, household activity, or another routine selected by the\nparticipant.\nMorning: 06:00 to 10:00\nMidday: 10:00 to 14:00\nAfternoon: 14:00 to 18:00\nEvening: 18:00 to 22:00\n2. Select a target sleep routine\nPreferred bedtime:\nPreferred wake time:\n3. Notification preferences\nActivity reminder enabled\nSleep reminder enabled\nWeekly planning prompt enabled\nQuiet hours enabled\n4. Safety and study reminders\nStop any voluntary activity that causes discomfort. The study application is not an emergency service\nand does not provide medical advice. Contact an appropriate healthcare professional for health concerns\nand local emergency services for urgent situations.\nParticipant initials:\nDate:\nStudy staff initials:\nSite:\nSYNTHETIC SCANNED PAGE - NOT FOR CLINICAL USE\nAURORA-WELL-01\nProtocol Deviation Review Form\nAppendix B I Controlled Form\nSite ID:\nParticipant ID:\nDate:\nDeviation classification\nEligibility\nVisit window\nConsent\nOther\nDeviation details\nDate identified\n04 Oct 2026\nProcedure affected\nWeek 6 questionnaire\nExpected window\nDays 38 to 46\nActual completion\nDay 48\nImmediate action\nQuestionnaire accepted and timing deviation documented\nImpact assessment\nNo impact on participant rights or safety\nNo material impact on primary endpoint interpretation\nCorrective or preventive action required\nReviewer conclusion\nMinor timing deviation. Retain the assessment in the analysis dataset with the observed completion\ndate. Include the event in the protocol deviation listing and summarize by treatment group before\ndatabase lock.\nInvestigator signature\nDate\nREVIEWED\nSYNTHETIC SCANNED PAGE - NOT FOR CLINICAL USE\nAURORA-WELL-01",
+  "pages": [
+    {
+      "page_number": 1,
+      "text": "AURORA-WELL-01 | Synthetic Clinical Protocol\nVersion 1.1 | 04 October 2026\nSYNTHETIC TEST DOCUMENT - NOT FOR CLINICAL USE\nPage 1\nSYNTHETIC TEST DOCUMENT\nAURORA-WELL-01\nA Randomized, Controlled Pilot Study of a Digital Wellness Program for Improving Daily Activity\nand Sleep Routine Consistency in Adult Volunteers\nFigure 1. Conceptual study technology and wellness context. Synthetic visual included to test embedded-image extraction.\nProtocol identifier\nAURORA-WELL-01\nVersion\n1.1\nDate\n04 October 2026\nDesign\nRandomized, parallel-group, assessor-blinded pilot study\nPopulation\n120 adult volunteers\nSponsor\nNorthstar Clinical Research Collaborative (fictional)\nThis protocol is entirely fictional and exists only for software, extraction, chunking, embedding, indexing, image, and\ntable processing tests.\n",
+      "start_offset": 0,
+      "end_offset": 805,
+      "word_count": 105,
+      "quality_score": 0.8335403726708075,
+      "requires_ocr": false,
+      "ocr_applied": false,
+      "extraction_method": "TEXT"
+    },
+    {
+      "page_number": 2,
+      "text": "AURORA-WELL-01 | Synthetic Clinical Protocol\nVersion 1.1 | 04 October 2026\nSYNTHETIC TEST DOCUMENT - NOT FOR CLINICAL USE\nPage 2\n1. Protocol Synopsis\nItem\nDescription\nPrimary objective\nEvaluate whether a structured digital wellness program improves consistency of daily activity\nover 12 weeks.\nSecondary objectives\nEvaluate sleep timing regularity, engagement, usability, retention, and data completeness.\nDesign\nTwo-week baseline, eight-week intervention, and two-week follow-up; randomized 1:1.\nIntervention\nDigital reminders, weekly planning prompts, activity goal setting, and sleep-routine education.\nControl\nStatic wellness information without adaptive reminders or weekly planning prompts.\nPrimary endpoint\nChange from baseline in the percentage of evaluable days meeting a participant-specific\nactivity window.\nDuration\nUp to 14 weeks per participant, including screening and closeout.\n1.1 Schedule Overview\nPeriod\nWeeks\nMain activities\nScreening\n-2 to 0\nConsent, eligibility, demographics, and device compatibility\nBaseline\n0 to 2\nPassive activity capture, sleep diary, and questionnaires\nIntervention\n2 to 10\nAssigned study content, weekly planning, and data capture\nFollow-up\n10 to 12\nFinal passive capture, questionnaires, and closeout\nThe intervention does not provide diagnosis, treatment, emergency monitoring, or medical advice.\n",
+      "start_offset": 806,
+      "end_offset": 2151,
+      "word_count": 177,
+      "quality_score": 0.8327137546468402,
+      "requires_ocr": false,
+      "ocr_applied": false,
+      "extraction_method": "TEXT"
+    },
+    {
+      "page_number": 3,
+      "text": "AURORA-WELL-01 | Synthetic Clinical Protocol\nVersion 1.1 | 04 October 2026\nSYNTHETIC TEST DOCUMENT - NOT FOR CLINICAL USE\nPage 3\n2. Background and Rationale\nRegular daily activity and consistent sleep timing are common behavioral indicators in wellness research. Routine\nvariability may arise from work schedules, travel, caregiving, and competing demands. Digital planning tools may help\nparticipants organize daily routines, although engagement can decline when reminders are excessive or poorly timed.\nAURORA-WELL-01 is a low-risk software-enabled pilot study. The program provides general planning prompts rather\nthan a medical intervention. The study is intended to estimate feasibility, retention, engagement, and endpoint variability\nbefore a larger investigation.\nFigure 2. Conceptual study journey from screening through follow-up and analysis. Synthetic visual included to test image\nextraction and S3 asset persistence.\n2.1 Rationale for the Program\n•\nWeekly planning supports realistic activity and sleep windows.\n•\nDaily reminders are limited and may be snoozed.\n•\nProgress summaries emphasize consistency rather than competition.\n•\nParticipants may stop optional prompts at any time.\n",
+      "start_offset": 2152,
+      "end_offset": 3350,
+      "word_count": 167,
+      "quality_score": 0.8297161936560935,
+      "requires_ocr": false,
+      "ocr_applied": false,
+      "extraction_method": "TEXT"
+    },
+    {
+      "page_number": 4,
+      "text": "AURORA-WELL-01 | Synthetic Clinical Protocol\nVersion 1.1 | 04 October 2026\nSYNTHETIC TEST DOCUMENT - NOT FOR CLINICAL USE\nPage 4\n3. Objectives and Endpoints\nLevel\nObjective\nEndpoint\nPrimary\nAssess change in activity regularity\nChange in percentage of evaluable days inside the selected\nactivity window\nSecondary\nAssess sleep timing regularity\nChange in standard deviation of nightly sleep midpoint\nSecondary\nAssess engagement\nProportion of intervention weeks with a completed planning\ninteraction\nSecondary\nAssess retention\nProportion completing the Week 12 assessment\nSecondary\nAssess usability\nMean score on the study usability questionnaire\nExploratory\nExplore daytime functioning\nChange in a short self-reported functioning scale\n3.1 Endpoint Rules\n•\nA day is evaluable when at least 10 hours of device availability is recorded.\n•\nSleep midpoint is derived from participant-entered sleep and wake times after plausibility checks.\n•\nTimestamps are converted to participant-local time.\n•\nTemporary interruptions use available data under the prespecified analysis strategy.\n3.2 Sample Size Rationale\nA total of 120 randomized participants, approximately 60 per group, is expected to provide adequate precision for\nfeasibility estimates. Assuming up to 15% attrition, approximately 102 participants are expected to contribute to the\nprimary analysis.\n",
+      "start_offset": 3351,
+      "end_offset": 4702,
+      "word_count": 189,
+      "quality_score": 0.840858623242043,
+      "requires_ocr": false,
+      "ocr_applied": false,
+      "extraction_method": "TEXT"
+    },
+    {
+      "page_number": 5,
+      "text": "AURORA-WELL-01 | Synthetic Clinical Protocol\nVersion 1.1 | 04 October 2026\nSYNTHETIC TEST DOCUMENT - NOT FOR CLINICAL USE\nPage 5\n4. Study Design and Population\nAfter a two-week baseline period, eligible participants are assigned in a 1:1 ratio to the digital wellness program or\ncontrol condition. Assignment is stratified by baseline activity regularity and study site.\n4.1 Study Flow\nStage\nActivity\nOutput\nScreening\nConfirm eligibility, consent, and smartphone compatibility\nScreened participant\nBaseline\nCollect at least 7 activity days and 5 sleep diaries\nBaseline-qualified participant\nRandomization\nApply centralized allocation with concealed variable block sizes\nAssigned group\nIntervention\nDeliver assigned content and collect engagement data\nIntervention dataset\nFollow-up\nCollect final passive data and questionnaires\nCompleted participant record\n4.2 Inclusion Criteria\n•\nAge 21 to 65 years.\n•\nAble to provide informed consent.\n•\nOwns a compatible smartphone.\n•\nReports an irregular activity or sleep routine.\n•\nWilling to complete brief electronic questionnaires.\n4.3 Exclusion Criteria\n•\nConflicting research participation.\n•\nPlanned prolonged travel across more than three time zones.\n•\nRecent use of a similar structured wellness program.\n•\nInvestigator determination that participation is unsuitable.\n",
+      "start_offset": 4703,
+      "end_offset": 6019,
+      "word_count": 184,
+      "quality_score": 0.8320668693009119,
+      "requires_ocr": false,
+      "ocr_applied": false,
+      "extraction_method": "TEXT"
+    },
+    {
+      "page_number": 6,
+      "text": "AURORA-WELL-01 | Synthetic Clinical Protocol\nVersion 1.1 | 04 October 2026\nSYNTHETIC TEST DOCUMENT - NOT FOR CLINICAL USE\nPage 6\n5. Schedule of Activities\nProcedure\nScreen\nBase\nWk 2\nWk 6\nWk 10\nWk 12\nConsent\nX\nEligibility\nX\nX\nDemographics\nX\nDevice check\nX\nX\nActivity capture\nX\nX\nX\nX\nX\nSleep diary\nX\nX\nX\nX\nX\nRandomization\nX\nEngagement\nX\nX\nX\nUsability\nX\nFunctioning scale\nX\nX\nX\nCloseout\nX\n5.1 Data Collection Windows\nAssessment\nTarget\nAllowed window\nBaseline completion\nDay 14\nDays 12 to 18\nWeek 6\nDay 42\nDays 38 to 46\nWeek 10\nDay 70\nDays 66 to 74\nWeek 12 closeout\nDay 84\nDays 80 to 91\nMissed questionnaires may be reissued within the allowed window. Passive device data are processed using\nprespecified derivation rules.\n",
+      "start_offset": 6020,
+      "end_offset": 6739,
+      "word_count": 135,
+      "quality_score": 0.7983310152990264,
+      "requires_ocr": false,
+      "ocr_applied": false,
+      "extraction_method": "TEXT"
+    },
+    {
+      "page_number": 7,
+      "text": "AURORA-WELL-01 | Synthetic Clinical Protocol\nVersion 1.1 | 04 October 2026\nSYNTHETIC TEST DOCUMENT - NOT FOR CLINICAL USE\nPage 7\n6. Data Management, Privacy, and Security\nStudy data are captured through electronic forms, the study application, and device synchronization services.\nAutomated checks identify missing fields, implausible dates, duplicate submissions, and out-of-window assessments.\nCorrections require an audit trail.\nFigure 3. Conceptual secure data flow across participant devices, cloud services, and research systems. Synthetic visual\nincluded to test embedded-image extraction.\n6.1 Privacy Controls\n•\nDirect identifiers are stored separately from coded study records.\n•\nAccess is restricted by study role and reviewed periodically.\n•\nData exports use encrypted transfer and controlled storage locations.\n•\nRetention and deletion follow the approved data-management plan.\n6.2 Analysis Populations\nPopulation\nDefinition\nEnrolled\nAll individuals who provide informed consent\nRandomized\nAll participants assigned to a group\nPrimary analysis\nRandomized participants meeting minimum evaluable-data requirements\nPer-protocol\nParticipants without major eligibility or data deviations\nSafety summary\nParticipants who begin the assigned study condition\n",
+      "start_offset": 6740,
+      "end_offset": 8002,
+      "word_count": 165,
+      "quality_score": 0.8391442155309033,
+      "requires_ocr": false,
+      "ocr_applied": false,
+      "extraction_method": "TEXT"
+    },
+    {
+      "page_number": 8,
+      "text": "AURORA-WELL-01 | Synthetic Clinical Protocol\nVersion 1.1 | 04 October 2026\nSYNTHETIC TEST DOCUMENT - NOT FOR CLINICAL USE\nPage 8\n7. Safety and Quality Oversight\nParticipants are instructed to report unfavorable experiences associated with study participation. Personnel document\nreported events, assess seriousness and relatedness, and follow site reporting procedures. The application does not\nprovide emergency monitoring.\n7.1 Event Categories\nCategory\nExample\nAction\nApplication issue\nUnexpected notification or synchronization\nfailure\nDocument, troubleshoot, and assess effect on study\ndata\nParticipation burden\nExcessive reminders or questionnaire fatigue\nAdjust optional reminders and document preference\nPhysical experience\nTemporary discomfort during voluntary activity\nStop activity and seek appropriate care if required\nPrivacy concern\nSuspected unauthorized access\nEscalate under the privacy incident procedure\n7.2 Quality Control\n•\nComplete site training before participant-facing activity.\n•\nUse required-field and range checks in key forms.\n•\nReview a sample of consent, eligibility, and endpoint records.\n•\nResolve or document data queries before database lock.\n•\nVersion analysis datasets and derivation specifications.\n7.3 Protocol Deviations\nA protocol deviation is any departure from the approved procedures or participant instructions. Deviations are\ndocumented, assessed for impact on participant rights and data reliability, and reviewed for corrective action.\nEnd of Protocol\nThis synthetic protocol was generated only to test document upload, native text extraction, image extraction, table extraction, OCR fallback, page\noffsets, chunking, embedding, and indexing.\n",
+      "start_offset": 8003,
+      "end_offset": 9693,
+      "word_count": 223,
+      "quality_score": 0.8420118343195266,
+      "requires_ocr": false,
+      "ocr_applied": false,
+      "extraction_method": "TEXT"
+    },
+    {
+      "page_number": 9,
+      "text": "Participant Routine Planning Worksheet\nAppendix A I Site Copy\nParticipant ID:\nVisit: Week 2\nComplete with study staff after randomization. Keep one copy for reference.\n1. Select a realistic daily activity window\nChoose a period of the day when ordinary activity is usually possible. The study does not require\nstrenuous exercise. Examples include walking, household activity, or another routine selected by the\nparticipant.\nMorning: 06:00 to 10:00\nMidday: 10:00 to 14:00\nAfternoon: 14:00 to 18:00\nEvening: 18:00 to 22:00\n2. Select a target sleep routine\nPreferred bedtime:\nPreferred wake time:\n3. Notification preferences\nActivity reminder enabled\nSleep reminder enabled\nWeekly planning prompt enabled\nQuiet hours enabled\n4. Safety and study reminders\nStop any voluntary activity that causes discomfort. The study application is not an emergency service\nand does not provide medical advice. Contact an appropriate healthcare professional for health concerns\nand local emergency services for urgent situations.\nParticipant initials:\nDate:\nStudy staff initials:\nSite:\nSYNTHETIC SCANNED PAGE - NOT FOR CLINICAL USE\nAURORA-WELL-01",
+      "start_offset": 9694,
+      "end_offset": 10820,
+      "word_count": 163,
+      "quality_score": 0.8232682060390764,
+      "requires_ocr": true,
+      "ocr_applied": true,
+      "extraction_method": "OCR"
+    },
+    {
+      "page_number": 10,
+      "text": "Protocol Deviation Review Form\nAppendix B I Controlled Form\nSite ID:\nParticipant ID:\nDate:\nDeviation classification\nEligibility\nVisit window\nConsent\nOther\nDeviation details\nDate identified\n04 Oct 2026\nProcedure affected\nWeek 6 questionnaire\nExpected window\nDays 38 to 46\nActual completion\nDay 48\nImmediate action\nQuestionnaire accepted and timing deviation documented\nImpact assessment\nNo impact on participant rights or safety\nNo material impact on primary endpoint interpretation\nCorrective or preventive action required\nReviewer conclusion\nMinor timing deviation. Retain the assessment in the analysis dataset with the observed completion\ndate. Include the event in the protocol deviation listing and summarize by treatment group before\ndatabase lock.\nInvestigator signature\nDate\nREVIEWED\nSYNTHETIC SCANNED PAGE - NOT FOR CLINICAL USE\nAURORA-WELL-01",
+      "start_offset": 10821,
+      "end_offset": 11673,
+      "word_count": 118,
+      "quality_score": 0.852112676056338,
+      "requires_ocr": true,
+      "ocr_applied": true,
+      "extraction_method": "OCR"
+    }
+  ],
+  "page_count": 10,
+  "ocr_page_count": 2,
+  "image_count": 5,
+  "table_count": 9,
+  "images": [
+    {
+      "image_id": "image-1-1",
+      "page_number": 1,
+      "extension": "png",
+      "s3_key": "canonical-documents/5abd56280df8df8fed4df2924e9568d9f730be30d078666e8960fa013afe457e/images/image-1-1.png",
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "image_id": "image-3-1",
+      "page_number": 3,
+      "extension": "png",
+      "s3_key": "canonical-documents/5abd56280df8df8fed4df2924e9568d9f730be30d078666e8960fa013afe457e/images/image-3-1.png",
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "image_id": "image-7-1",
+      "page_number": 7,
+      "extension": "png",
+      "s3_key": "canonical-documents/5abd56280df8df8fed4df2924e9568d9f730be30d078666e8960fa013afe457e/images/image-7-1.png",
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "image_id": "image-9-1",
+      "page_number": 9,
+      "extension": "png",
+      "s3_key": "canonical-documents/5abd56280df8df8fed4df2924e9568d9f730be30d078666e8960fa013afe457e/images/image-9-1.png",
+      "width": 1819,
+      "height": 2573
+    },
+    {
+      "image_id": "image-10-1",
+      "page_number": 10,
+      "extension": "png",
+      "s3_key": "canonical-documents/5abd56280df8df8fed4df2924e9568d9f730be30d078666e8960fa013afe457e/images/image-10-1.png",
+      "width": 1819,
+      "height": 2573
+    }
+  ],
+  "tables": [
+    {
+      "table_id": "table-1-1",
+      "page_number": 1,
+      "s3_key": "canonical-documents/5abd56280df8df8fed4df2924e9568d9f730be30d078666e8960fa013afe457e/tables/table-1-1.json",
+      "row_count": 6,
+      "column_count": 2,
+      "title": null
+    },
+    {
+      "table_id": "table-2-1",
+      "page_number": 2,
+      "s3_key": "canonical-documents/5abd56280df8df8fed4df2924e9568d9f730be30d078666e8960fa013afe457e/tables/table-2-1.json",
+      "row_count": 8,
+      "column_count": 2,
+      "title": null
+    },
+    {
+      "table_id": "table-2-2",
+      "page_number": 2,
+      "s3_key": "canonical-documents/5abd56280df8df8fed4df2924e9568d9f730be30d078666e8960fa013afe457e/tables/table-2-2.json",
+      "row_count": 5,
+      "column_count": 3,
+      "title": null
+    },
+    {
+      "table_id": "table-4-1",
+      "page_number": 4,
+      "s3_key": "canonical-documents/5abd56280df8df8fed4df2924e9568d9f730be30d078666e8960fa013afe457e/tables/table-4-1.json",
+      "row_count": 7,
+      "column_count": 3,
+      "title": null
+    },
+    {
+      "table_id": "table-5-1",
+      "page_number": 5,
+      "s3_key": "canonical-documents/5abd56280df8df8fed4df2924e9568d9f730be30d078666e8960fa013afe457e/tables/table-5-1.json",
+      "row_count": 6,
+      "column_count": 3,
+      "title": null
+    },
+    {
+      "table_id": "table-6-1",
+      "page_number": 6,
+      "s3_key": "canonical-documents/5abd56280df8df8fed4df2924e9568d9f730be30d078666e8960fa013afe457e/tables/table-6-1.json",
+      "row_count": 12,
+      "column_count": 7,
+      "title": null
+    },
+    {
+      "table_id": "table-6-2",
+      "page_number": 6,
+      "s3_key": "canonical-documents/5abd56280df8df8fed4df2924e9568d9f730be30d078666e8960fa013afe457e/tables/table-6-2.json",
+      "row_count": 5,
+      "column_count": 3,
+      "title": null
+    },
+    {
+      "table_id": "table-7-1",
+      "page_number": 7,
+      "s3_key": "canonical-documents/5abd56280df8df8fed4df2924e9568d9f730be30d078666e8960fa013afe457e/tables/table-7-1.json",
+      "row_count": 6,
+      "column_count": 2,
+      "title": null
+    },
+    {
+      "table_id": "table-8-1",
+      "page_number": 8,
+      "s3_key": "canonical-documents/5abd56280df8df8fed4df2924e9568d9f730be30d078666e8960fa013afe457e/tables/table-8-1.json",
+      "row_count": 5,
+      "column_count": 3,
+      "title": null
+    }
+  ],
+  "warnings": [],
+  "source_version_id": "UIxhyk73qIPk4p.jFXVrbUYORpmsXZ4s",
+  "processing_schema_version": "extraction-v1",
+  "already_processed": false,
+  "processing_status": "SUCCESS",
+  "error_message": null
+}

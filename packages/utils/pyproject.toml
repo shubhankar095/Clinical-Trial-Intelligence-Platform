@@ -17,5 +17,6 @@ dev = [
     "pytest>=8.0.0"
 ]
 
-[tool.setuptools]
-packages = ["utils"]
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["utils"]

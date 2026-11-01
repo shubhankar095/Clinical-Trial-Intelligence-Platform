@@ -1,0 +1,1 @@
+{"Records":[{"eventSource":"aws:s3","eventName":"ObjectCreated:Put","eventTime":"2026-10-20T12:00:00Z","s3":{"bucket":{"name":"clinical-kb-processed-dev"},"object":{"key":"canonical-documents/5abd56280df8df8fed4df2924e9568d9f730be30d078666e8960fa013afe457e/_SUCCESS.json","versionId":"test-version"}}}]}

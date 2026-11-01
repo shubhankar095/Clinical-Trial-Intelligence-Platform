@@ -3,6 +3,8 @@
 .pytest_cache/
 .python-version/
 .coverage
+tfplan
+tfplan-destroy
 *.tfstate
 *.tfstate.*
 crash.log
@@ -58,3 +60,7 @@ test-output/*
 tests/test.py
 scripts/manual_extraction_test.py
 knowledge-base/extraction/scripts/*
+knowledge-base/ingestion/development-output/*
+knowledge-base/ingestion/scripts/*
+scripts/*
+.vscode/*

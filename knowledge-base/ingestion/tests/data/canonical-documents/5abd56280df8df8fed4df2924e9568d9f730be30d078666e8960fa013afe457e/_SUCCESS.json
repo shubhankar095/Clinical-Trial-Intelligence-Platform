@@ -1,0 +1,11 @@
+{
+  "document_id": "5abd56280df8df8fed4df2924e9568d9f730be30d078666e8960fa013afe457e",
+  "source_bucket": "clinical-kb-raw-dev",
+  "source_key": "documents/AURORA-MIXED-01/protocols/synthetic_mixed_extraction_protocol.pdf",
+  "source_version_id": "UIxhyk73qIPk4p.jFXVrbUYORpmsXZ4s",
+  "processing_schema_version": "extraction-v1",
+  "canonical_bucket": "clinical-kb-processed-dev",
+  "canonical_key": "canonical-documents/5abd56280df8df8fed4df2924e9568d9f730be30d078666e8960fa013afe457e/extracted-document.json",
+  "completed_at": "2026-10-03T19:29:02.836650+00:00",
+  "processing_status": "SUCCESS"
+}

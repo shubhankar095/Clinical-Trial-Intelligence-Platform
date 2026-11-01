@@ -1,0 +1,27 @@
+[
+  [
+    "Period",
+    "Weeks",
+    "Main activities"
+  ],
+  [
+    "Screening",
+    "-2 to 0",
+    "Consent, eligibility, demographics, and device compatibility"
+  ],
+  [
+    "Baseline",
+    "0 to 2",
+    "Passive activity capture, sleep diary, and questionnaires"
+  ],
+  [
+    "Intervention",
+    "2 to 10",
+    "Assigned study content, weekly planning, and data capture"
+  ],
+  [
+    "Follow-up",
+    "10 to 12",
+    "Final passive capture, questionnaires, and closeout"
+  ]
+]

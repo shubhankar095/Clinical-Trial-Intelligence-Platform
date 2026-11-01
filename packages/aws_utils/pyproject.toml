@@ -9,7 +9,8 @@ description = "Shared platform utilities"
 requires-python = ">=3.12"
 
 dependencies = [
-    "boto3==1.43.98"
+    "boto3==1.43.98",
+    "opensearch-py==3.2.0"
 ]
 
 [project.optional-dependencies]
@@ -17,5 +18,6 @@ dev = [
     "pytest>=8.0.0"
 ]
 
-[tool.setuptools]
-packages = ["aws_utils"]
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["aws_utils"]

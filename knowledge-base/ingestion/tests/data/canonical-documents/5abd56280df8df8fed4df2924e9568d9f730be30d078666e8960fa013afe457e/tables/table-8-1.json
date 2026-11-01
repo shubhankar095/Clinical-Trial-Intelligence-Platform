@@ -1,0 +1,27 @@
+[
+  [
+    "Category",
+    "Example",
+    "Action"
+  ],
+  [
+    "Application issue",
+    "Unexpected notification or synchronization\nfailure",
+    "Document, troubleshoot, and assess effect on study\ndata"
+  ],
+  [
+    "Participation burden",
+    "Excessive reminders or questionnaire fatigue",
+    "Adjust optional reminders and document preference"
+  ],
+  [
+    "Physical experience",
+    "Temporary discomfort during voluntary activity",
+    "Stop activity and seek appropriate care if required"
+  ],
+  [
+    "Privacy concern",
+    "Suspected unauthorized access",
+    "Escalate under the privacy incident procedure"
+  ]
+]

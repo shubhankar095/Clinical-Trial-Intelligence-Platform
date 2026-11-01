@@ -1,0 +1,26 @@
+[
+  [
+    "Population",
+    "Definition"
+  ],
+  [
+    "Enrolled",
+    "All individuals who provide informed consent"
+  ],
+  [
+    "Randomized",
+    "All participants assigned to a group"
+  ],
+  [
+    "Primary analysis",
+    "Randomized participants meeting minimum evaluable-data requirements"
+  ],
+  [
+    "Per-protocol",
+    "Participants without major eligibility or data deviations"
+  ],
+  [
+    "Safety summary",
+    "Participants who begin the assigned study condition"
+  ]
+]
